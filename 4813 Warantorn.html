@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function calculator() {
+            let d = parseFloat(document.getElementById("diameter").value);
+            let n = parseFloat(document.getElementById("ความเร็วรอบ").value);
+            let Vc = (3.14159265 * D * n) / 1000;
+            document.getElementById("speedrate").value = Vc.toFixed(3);
+        }
+    </script>
+    <script>
+        function Feed() {
+            let Feed per tooth= parseFloat(document.getElementById("f").value);
+            let จำนวนฟัน = parseFloat(document.getElementById("n").value);
+            let ความเร็ว (RPM) = parseFloat(document.getElementById("v").value);
+            let Vf = (f * n *v);
+            document.getElementById("result").value = Vf.toFixed(3);
+    </script>
+    <style>
+        .Feed {
+            width: 250px;
+            height: 200;
+            border: 5px solid black;
+            border-radius: 20px;
+            background-color: rgb(248, 149, 182);
+            padding: 20px;
+            margin: 20px;
+        }
+        .calculator h4 {
+            text-align: center;
+        }
+        .calculator input {
+            background-color: powderblue;
+        }
+        .calculator button {
+            background-color: rgb(167, 241, 105);
+        }
+    </style>
+
+    <style>
+         .Speedcalculator {
+            width: 250px;
+            height: 200;
+            border: 5px solid black;
+            border-radius: 20px;
+            background-color: rgb(248, 149, 182);
+            padding: 20px;
+            margin: 20px;
+        }
+        .Speedcalculator h4 {
+            text-align: center;
+        }
+        .Speedcalculator input {
+            background-color: powderblue;
+        }
+        .Speedcalculator button {
+            background-color: rgb(167, 241, 105);
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="feed">
+        <h3>Feed Rate</h3>
+        <label for="" style="margin-left: 20px;">Feed per Tooth (fz)</label><br>
+        <input type="text" name="" id="Fpertooth" size="10px"> (mm/tooth)
+        <br>
+        <label for="" style="margin-left: 20px;">Number of Teeth (z)</label><br>
+        <input type="text" name="" id="Numberoftooth" size="10px">
+        <br>
+        <label for="" style="margin-left: 20px;">Spindle Speed (n)</label><br>
+        <input type="text" name="" id="ความเร็วรอบ2" size="10px"> (rev/min)
+        <br>
+        <label for="" style="margin-left: 20px;">Feed Rate (Vf)</label><br>
+        <input type="text" name="" id="feedrate" size="10px"> (mm/min)
+        <br>
+        <button class="botton2" onclick="feedrate()">Enter</button>
+    <div class="Speedcalculator">
+    <h4>Speed</h4>
+    <label for="">SFM</label> <br>
+    <input type="text" name="" id="Y1">
+    </select>
+    <br>
+    <label for="">Tool dia</label> 
+    <br>
+    <input type="text" name="" id="Y2">
+    <br>
+    <label for="">Speed (RPM)</label> <br>
+    <input type="text" name="" id="Result">
+    <br>
+    <button onclick="basicCalculation()">Enter</button>
+    </div>
+    </div>
+</div>
+</body>
+</html>

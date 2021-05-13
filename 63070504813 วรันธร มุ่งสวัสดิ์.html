@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function speedrate() {
+            let D = parseFloat(document.getElementById("cd").value);
+            let n = parseFloat(document.getElementById("ss").value);
+            let Vc = (3.14159265 * D * n) / 1000;
+            document.getElementById("sr").value = Vc.toFixed(3);
+        }
+    </script>
+    <script>
+        function feedrate() {
+            let fz = parseFloat(document.getElementById("Fpt").value);
+            let z = parseFloat(document.getElementById("Numberoftooth").value);
+            let n2 = parseFloat(document.getElementById("ความเร็วรอบ2").value);
+            let Vf = (fz * z *n2);
+            document.getElementById("feedrate").value = Vf.toFixed(3);
+        }
+    </script>
+</head>
+<body background="https://i.pinimg.com/originals/74/97/34/7497347adc88d1ff1dcb845232cc99e7.jpg">
+    <div class="x">
+        <h2><center>Speed Rate & Feed Rate</center></h2>
+    </div>
+    <center><img src="https://i.ytimg.com/vi/EIikH-h5LFI/maxresdefault.jpg" width="400" height="250"></center>
+    <div class="container">
+    <div class="c1">
+        <h3>Speed Rate</h3>
+        <label for="" style="margin-left: 15px;">Spindle Speed(n)</label><br>
+        <input type="text" name="" id="ss" size="10px"> (rev/min)
+        <br>
+        <label for="" style="margin-left: 15px;">Cutting Diameter(D)</label><br>
+        <input type="text" name="" id="cd" size="10px"> (mm)
+        <br>
+        <label for="" style="margin-left: 15px;">Speed Rate(Vc)</label><br>
+        <input type="text" name="" id="sr" size="10px"> (m/min)
+        <br>
+        <button class="botton" onclick="speedrate()">Enter</button>
+    </div>
+    <div class="c2">
+        <h3>Feed Rate</h3>
+        <label for="" style="margin-left: 15px;">Feed per Tooth(fz)</label>
+        <br>
+        <input type="text" name="" id="Fpt" size="10px"> (mm/tooth)
+        <br>
+        <label for="" style="margin-left: 15px;">Number of Teeth(z)</label>
+        <br>
+        <input type="text" name="" id="Numberoftooth" size="10px">
+        <br>
+        <label for="" style="margin-left: 15px;">Spindle Speed(n)</label>
+        <br>
+        <input type="text" name="" id="ความเร็วรอบ2" size="10px"> (rev/min)
+        <br>
+        <label for="" style="margin-left: 20px;">Feed Rate(Vf)</label>
+        <br>
+        <input type="text" name="" id="feedrate" size="10px"> (mm/min)
+        <br>
+        <button class="botton2" onclick="feedrate()">Enter</button>
+    </div>
+    </div>
+    <style>
+        .x {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: rgb(235, 235, 144);
+        } 
+        .container {
+            display: flex;
+            justify-content: center;
+        }
+        .c1 {
+            background-color: rgb(238, 127, 219);
+            width: 320px;
+            height: 280px;
+            border: 2px solid black;
+            border-radius: 20px;
+            padding: 20px;
+            margin: 15px;
+            font-family: 'Courier New', Courier, monospace;
+           }
+           .c2 {
+            background-color: rgb(107, 206, 219);
+            width: 320px;
+            height: 340px;
+            border: 2px solid black;
+            border-radius: 20px;
+            padding: 20px;
+            margin: 15px;
+            font-family: 'Courier New', Courier, monospace;
+           }
+        .c1 h3 {
+               text-align: center;
+               background-color: rgb(255, 224, 248);
+               padding: 5px;
+           }
+        .c2 h3 {
+               text-align: center;
+               background-color: rgb(191, 245, 245);
+               padding: 5px;
+           }
+        .c1 input {
+               background-color: rgb(188, 226, 241) ;
+               width: 150px;
+               border: 2px solid black;
+               padding: 5px;
+               margin-left: 20px;
+               margin-bottom: 10px;
+               margin-top: 3px;
+           }
+        .c2 input {
+               background-color: rgb(245, 194, 236) ;
+               width: 150px;
+               border: 2px solid black;
+               padding: 5px;
+               margin-left: 20px;
+               margin-bottom: 10px;
+               margin-top: 3px;
+           }
+        .botton {
+               background-color: rgb(236, 236, 142);
+               border:black;
+               border-radius: 10px;
+               padding: 5px;
+               margin-left: 15px;
+               font-size: 14px;
+           }
+        .botton2 {
+               background-color: rgb(235, 235, 144);
+               border:black;
+               border-radius: 10px;
+               padding: 5px;
+               margin-left: 15px;
+               font-size: 14px;
+           }
+    </style>
+</body>
+</html>
